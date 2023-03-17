@@ -1,1 +1,11 @@
+/* reset css */
+@import-normalize;
+
 /* global styling file */
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
