@@ -9,6 +9,8 @@ export async function loadAllApartments() {
 
     const apartments = await data
 
+    if ( apartments.length === 0 ) throw new Response('', { status: 404 })
+
     return { apartments }
 
 }
@@ -17,11 +19,13 @@ export async function loadAllApartments() {
  * return data for only one apartment
  * from its Id
  * @param {string} Id the apartment id
- * @return {object} the apartment data
+ * @return {array} the apartment data
  */
 export async function loadOneApartment(Id) {
 
     const apartment = await data.filter(apt => apt.id === Id)
+
+    if ( apartment.length === 0 ) throw new Response('', { status: 404 })
 
     return { apartment }
 
