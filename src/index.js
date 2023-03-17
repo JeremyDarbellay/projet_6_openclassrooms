@@ -1,6 +1,6 @@
 import './index.css';
 import { ErrorPage, Logement, About, App, Home } from './components'
-// import { jsonDataLoader } from '../../utils/jsonDataLoader'
+import { loadAllApartments, loadOneApartment } from './utils/jsonDataLoader'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -21,9 +21,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element: <Home />,
-        // loader: async ({params}) => {
-        //   return jsonDataLoader(`${params.logementId}`)
-        // }
+        loader: loadAllApartments,
       },
       {
         path: "/a-propos",
@@ -32,10 +30,10 @@ const router = createBrowserRouter([
       {
         element: <Logement />,
         path: "logement/:logementId",
-        // loader: async ({params}) => {
-        //   return jsonDataLoader(`${params.logementId}`)
-        // }
-      }
+        loader: async ({ params }) => {
+          return loadOneApartment(`${params.logementId}`)
+        }
+      },
 
     ],
   },
