@@ -1,3 +1,3 @@
 export default function Logement() {
-    return (<div>logements</div>)
+    return (<div>1 logement seulement </div>)
 }

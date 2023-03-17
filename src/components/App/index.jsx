@@ -1,7 +1,7 @@
-import './App.module.css';
-import { Header, Footer } from '..';
+import styles from './App.module.css'
+import { Header, Footer } from '..'
 
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom'
 
 import React from 'react'
 
@@ -12,10 +12,10 @@ export default function App() {
   return (
     <React.Fragment>
       <Header />
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
       <Footer />
     </React.Fragment>
-  );
+  )
 }
