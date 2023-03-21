@@ -10,7 +10,9 @@ export default function Home() {
 
     return (
         <div className={styles.home}>
-            <Banner img={bannerImg} alt="des vagues frappant des falaises" text="Chez vous, partout et ailleurs" />
+            <div className={styles.bannerWrapper}>
+                <Banner img={bannerImg} alt="des vagues frappant des falaises" text="Chez vous, partout et ailleurs" />
+            </div>
             <div className={styles.cardContainer}>
                 {
                     apartments.map((apartment) => (

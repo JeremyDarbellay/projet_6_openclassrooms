@@ -21,6 +21,10 @@
     flex: 1 1 auto;
 }
 
+.bannerWrapper {
+    height: 223px;
+}
+
 @media (max-width: 768px) {
     .cardContainer {
         gap: 30px 40px;
@@ -33,7 +37,13 @@
     }
 }
 
+@media (max-width: 768px) {
 
+    .bannerWrapper {
+        height: 140px;
+    }
+
+}
 
 @media (max-width: 480px) {
 
@@ -45,4 +55,7 @@
         margin-top: 43px;
     }
 
+    .bannerWrapper {
+        height: 111px;
+    }
 }
