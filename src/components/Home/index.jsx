@@ -13,7 +13,7 @@ export default function Home() {
             <div className={styles.bannerWrapper}>
                 <Banner img={bannerImg} alt="des vagues frappant des falaises" text="Chez vous, partout et ailleurs" />
             </div>
-            <div className={styles.cardContainer}>
+            <section className={styles.cardContainer} aria-label="Logements">
                 {
                     apartments.map((apartment) => (
                         <Link key={apartment.id} className={styles.cardLink} o={`/logement/${apartment.id}`}>
@@ -21,7 +21,7 @@ export default function Home() {
                         </Link>
                     ))
                 }
-            </div>
+            </section>
         </div>
     )
 }

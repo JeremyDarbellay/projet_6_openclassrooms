@@ -1,0 +1,42 @@
+.expanded {
+    font-size: 24px;
+    border: none;
+    background: unset;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.title {
+    background-color: #FF6060;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.75em 0.5em 1em;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+}
+
+.arrow {
+    transform: rotate(180deg)
+}
+
+.content {
+    border-radius: 0 0 5px 5px;
+    background: #F7F7F7;
+    color: #FF6060;
+    margin: 0;
+    padding: 36px 27px 19px 18px;
+    text-align: left;
+}
+
+.expanded .arrow{
+    transform: unset;
+}
+
+.expanded .content {
+    position: relative;
+    top: -9px;
+}
