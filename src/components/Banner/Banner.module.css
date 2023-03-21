@@ -27,6 +27,8 @@
     margin: 0;
     color: white;
     z-index: 1;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .bannerMask {
@@ -41,4 +43,25 @@
     mix-blend-mode: darken;
     opacity: 0.3;
     border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 140px;
+    }
+
+    .bannerText {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px ) {
+
+    .banner {
+        height: 111px;
+    }
+
+    .bannerText {
+        font-size: 24px;
+    }
 }
