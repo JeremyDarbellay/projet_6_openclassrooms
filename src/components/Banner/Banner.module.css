@@ -55,7 +55,7 @@
     }
 }
 
-@media (max-width: 480px ) {
+@media (max-width: 480px) {
 
     .banner {
         height: 111px;
@@ -65,7 +65,8 @@
         font-size: 24px;
     }
 
-    .bannerMask, .bannerImg {
+    .bannerMask,
+    .bannerImg {
         border-radius: 10px;
     }
 }

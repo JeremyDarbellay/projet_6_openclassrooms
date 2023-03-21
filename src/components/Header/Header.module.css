@@ -3,7 +3,7 @@
     margin: auto;
 }
 
-.Header > div {
+.Header>div {
     max-width: 1240px;
     width: 90%;
     display: flex;
@@ -14,13 +14,14 @@
     gap: 50px;
 }
 
-.Header > div > * {
+.Header>div>* {
     flex: 1 1 auto;
 }
 
 .Header nav {
     max-width: 270px;
 }
+
 .Header ul {
     display: flex;
     padding-left: 0;
@@ -61,10 +62,10 @@
 
 @media (max-width:480px) {
 
-    .Header > div {
+    .Header>div {
         margin-top: 20px;
     }
-    
+
     .Header ul {
         text-transform: uppercase;
         min-width: 140px;
@@ -74,7 +75,7 @@
         max-width: 145px;
     }
 
-    .Header > div > * {
+    .Header>div>* {
         flex-grow: 0;
     }
 

@@ -23,9 +23,10 @@
 
 @media (max-width: 768px) {
     .cardContainer {
-       gap: 30px 40px;
-        padding: 40px; 
+        gap: 30px 40px;
+        padding: 40px;
     }
+
     .cardLink {
         max-width: 500px;
         max-height: 500px;
@@ -34,7 +35,7 @@
 
 
 
-@media (max-width: 480px ) {
+@media (max-width: 480px) {
 
     .cardContainer {
         gap: 20px;
