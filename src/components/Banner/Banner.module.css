@@ -64,4 +64,8 @@
     .bannerText {
         font-size: 24px;
     }
+
+    .bannerMask, .bannerImg {
+        border-radius: 10px;
+    }
 }

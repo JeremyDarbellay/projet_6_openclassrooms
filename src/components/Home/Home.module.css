@@ -6,9 +6,42 @@
     background: #F7F7F7;
     border-radius: 25px;
     margin-top: 43px;
+    justify-content: center;
 }
 
 .home {
     margin-top: 63px;
     margin-bottom: 43px;
+}
+
+.cardLink {
+    max-width: 340px;
+    max-height: 340px;
+    min-width: 241px;
+    flex: 1 1 auto;
+}
+
+@media (max-width: 768px) {
+    .cardContainer {
+       gap: 30px 40px;
+        padding: 40px; 
+    }
+    .cardLink {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+
+
+@media (max-width: 480px ) {
+
+    .cardContainer {
+        gap: 20px;
+        padding: unset;
+        background: unset;
+        border-radius: unset;
+        margin-top: 43px;
+    }
+
 }

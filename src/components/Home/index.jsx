@@ -14,7 +14,7 @@ export default function Home() {
             <div className={styles.cardContainer}>
                 {
                     apartments.map((apartment) => (
-                        <Link to={`/logement/${apartment.id}`}>
+                        <Link className={styles.cardLink} o={`/logement/${apartment.id}`}>
                             <Card key={apartment.id} img={apartment.cover} title={apartment.title} />
                         </Link>
                     ))
