@@ -34,7 +34,6 @@ const router = createBrowserRouter([
           return loadOneApartment(`${params.logementId}`)
         }
       },
-
     ],
   },
 ]);

@@ -13,7 +13,9 @@ export default function App() {
     <React.Fragment>
       <Header />
       <main className={styles.main}>
-        <Outlet />
+        <div>
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </React.Fragment>

@@ -1,15 +1,31 @@
 .Header {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.Header > div {
+    max-width: 1240px;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px auto 0 auto;
-    padding: 0 100px;
-    max-width: 1440px;
+    margin: auto;
+    margin-top: 40px;
+    gap: 50px;
 }
 
+.Header > div > * {
+    flex: 1 1 auto;
+}
+
+.Header nav {
+    max-width: 270px;
+}
 .Header ul {
     display: flex;
-    gap: 60px;
+    padding-left: 0;
+    justify-content: space-between;
+    min-width: 200px;
 }
 
 .Header li {
@@ -26,24 +42,34 @@
     text-decoration: underline;
 }
 
+.Header img {
+    max-width: 100%;
+}
+
+.Header h1 {
+    margin: 0;
+    font-size: 0;
+    max-width: fit-content;
+}
+
 @media (max-width:480px) {
-    .Header {
-        padding: 1.25em;
-        padding-bottom: 1em;
-        gap: 50px;
-    }
 
-    .Header>img {
-        flex: 0 1 0;
+    .Header > div {
+        margin-top: 20px;
     }
-
-    .Header>nav {
-        flex: 1 0 auto;
-    }
-
+    
     .Header ul {
         gap: 10px;
         text-transform: uppercase;
+        min-width: 140px;
+    }
+
+    .Header h1 {
+        max-width: 145px;
+    }
+
+    .Header > div > * {
+        flex-grow: 0;
     }
 
     .Header a {
