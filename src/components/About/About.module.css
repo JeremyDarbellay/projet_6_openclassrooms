@@ -14,8 +14,18 @@
     height: 233px;
 }
 
+@media (max-width: 768px) {
+    .accordionWrapper {
+        width: 85%;
+    }
+}
+
 @media (max-width: 480px) {
     .aboutPage {
         margin-top: 1em;
+    }
+
+    .accordionWrapper {
+        width: 100%;
     }
 }

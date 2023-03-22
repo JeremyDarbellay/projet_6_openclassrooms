@@ -1,5 +1,5 @@
-/* import 700 weight for 404 */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/* weight for 404 text */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .error {
     display: flex;
@@ -11,20 +11,20 @@
     margin: 0 auto;
 }
 
-.error h2 {
+.error .number {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 288px;
     margin: 169px auto 0 auto;
 }
 
-.error div {
+.error .detail {
     font-size: 36px;
     margin-bottom: 180px;
 }
 
-.error a {
+.error .link {
     color: #FF6060;
     font-size: 18px;
     margin-bottom: 159px;
-} */
+}

@@ -1,10 +1,14 @@
-.expanded {
+/* import correct weight for accordion content */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+.button {
     font-size: 24px;
     border: none;
     background: unset;
     padding: 0;
     display: block;
     cursor: pointer;
+    width: 100%;
 }
 
 .title {
@@ -30,13 +34,30 @@
     margin: 0;
     padding: 36px 27px 19px 18px;
     text-align: left;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    position: relative;
+    top: -9px;
 }
 
-.expanded .arrow{
+.collapsed.arrow{
     transform: unset;
 }
 
-.expanded .content {
-    position: relative;
-    top: -9px;
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px
+    }
+    .content {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 13px
+    }
+    .content {
+        font-size: 12px;
+    }
 }

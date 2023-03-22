@@ -16,7 +16,7 @@ export default function Home() {
             <section className={styles.cardContainer} aria-label="Logements">
                 {
                     apartments.map((apartment) => (
-                        <Link key={apartment.id} className={styles.cardLink} o={`/logement/${apartment.id}`}>
+                        <Link key={apartment.id} className={styles.cardLink} to={`/logement/${apartment.id}`}>
                             <Card img={apartment.cover} title={apartment.title} />
                         </Link>
                     ))
