@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           return loadOneApartment(`${params.logementId}`)
         }
-      },
+      }
     ],
   },
 ]);

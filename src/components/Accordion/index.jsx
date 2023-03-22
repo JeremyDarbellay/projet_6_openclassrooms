@@ -22,7 +22,7 @@ export default function Accordion({ title, content}) {
 
                     <div>{title}</div>
 
-                    { collapsed ? <Arrow className={styles.arrow.collapsed}/> : <Arrow className={styles.arrow}/> }
+                    { collapsed ? <Arrow className={`${styles.arrow} ${styles.collapsed}`}/> : <Arrow className={styles.arrow}/> }
                     
                 </div>
                 
