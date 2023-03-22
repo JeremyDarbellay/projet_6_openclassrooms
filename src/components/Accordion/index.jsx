@@ -3,7 +3,7 @@ import { ReactComponent as Arrow } from './arrow.svg'
 
 import { useState } from 'react'
 
-export default function Accordion({ title, content}) {
+export default function Accordion({ title, content }) {
 
     const [ collapsed, setCollapsed ] = useState(false)
 
@@ -28,7 +28,7 @@ export default function Accordion({ title, content}) {
                 
             </ button>
 
-            { collapsed ? <p className={styles.content}>{content}</p> : null }
+            { collapsed ? <p className={styles.content}>{ content }</p> : null }
 
         </div>
     )
