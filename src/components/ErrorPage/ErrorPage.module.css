@@ -4,27 +4,60 @@
 .error {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
 
-.error .number {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 288px;
-    margin: 169px auto 0 auto;
+.container {
+    max-width: 50%;
+    margin: 169px auto 66px auto;
+}
+.img {
+    width: 100%;
 }
 
-.error .detail {
+.detail {
     font-size: 36px;
-    margin-bottom: 180px;
+    max-width: 70%;
+    margin: 0 auto 182px auto;
 }
 
-.error .link {
+.link {
     color: #FF6060;
     font-size: 18px;
-    margin-bottom: 159px;
+    max-width: 60%;
+    margin: 0 auto 159px auto;
 }
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 182px;
+        margin-bottom: 40px;
+    }
+    .detail {
+        margin-bottom: 157px;
+        font-size: 27px;
+    }
+    .link {
+        margin-bottom: 200px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 195px;
+        margin-bottom: 11px;
+    }
+    .detail {
+        margin-bottom: 133px;
+        font-size: 18px;
+    }
+    .link {
+        margin-bottom: 235px;
+        font-size: 14px;
+    }
+}
+
