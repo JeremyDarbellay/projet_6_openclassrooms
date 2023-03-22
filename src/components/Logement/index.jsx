@@ -23,7 +23,7 @@ export default function Logement() {
     return (
         <main>
             <section>
-                <Slideshow pictures={apartment.picture}/>
+                <Slideshow pictures={apartment.pictures} title={apartment.title}/>
             </section>
             <section>
                 <div>
