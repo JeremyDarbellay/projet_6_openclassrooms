@@ -4,6 +4,10 @@ import { ReactComponent as Star } from './star.svg'
 
 import { useLoaderData } from 'react-router-dom'
 
+/**
+ * return logement page with data
+ * @return {ReactComponent}
+ */
 export default function Logement() {
 
 
@@ -18,19 +22,30 @@ export default function Logement() {
      */
     function formatRating(rating) {
 
+        // check that rating is a string then make it an int
+        // if API has changed and rating became a number it works
+        // else it's an error, so throw it
         if (typeof (rating) == 'string') rating = parseInt(apartment.rating)
         else if (typeof (rating) == 'number') { }
         else throw new Response()
 
         let ratingList = []
 
-        for (let total = 0; total < 5; total++) {
+        // check that rating is between max and min rate
+        // others results leads to an error
+        if (rating >= 0 && rating <= 5) {
+            // assign x full stars, then put empty stars
+            for (let total = 0; total < 5; total++) {
 
-            rating--
+                rating--
 
-            if (rating > 0) ratingList.push({ "full": true })
-            else ratingList.push({ "full": false })
+                if (rating > 0) ratingList.push({ "full": true })
+                else ratingList.push({ "full": false })
 
+            }
+
+        } else {
+            throw new Response()
         }
 
         return ratingList
