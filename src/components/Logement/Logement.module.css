@@ -85,13 +85,14 @@
 
 .accordionsWrapper {
     display: flex;
-    gap: 76px;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 14px;
 }
 
 .accordionsWrapper > * {
-    flex: 1 1 50%;
+    max-width: 47.5%;
+    flex: 1 1 47.5%;
 }
 
 /* changing font-size for accordions */
@@ -102,6 +103,56 @@
 .accordionsWrapper > div > button > div > div {
     font-size: 18px;
     line-height: 142.6%;
+}
+
+@media (max-width: 768px) {
+    .mainSection {
+        margin-top: 15px;
+        margin-bottom: 16px;
+    }
+
+    .apartmentInfos {
+        max-width: 60%;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 142.6%;
+        margin-bottom: 5px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+        line-height: 142.6%;
+        margin-bottom: 10px;
+    }
+    
+    
+    .hostName {
+        font-size: 15px;
+        line-height: 142.6%;
+    }
+    
+    .hostImg {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+    
+    .star {
+        width: 27px;
+        height: 27px;
+        margin-right: 3px;
+    }
+
+    .accordionsWrapper {
+        flex-direction: column;
+        gap: 20px;
+    } 
+
+    .accordionsWrapper > * {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -163,7 +214,11 @@
 
     .accordionsWrapper {
         flex-direction: column;
-        gap: 20px;
+        
+    }
+    
+    .accordionsWrapper > * {
+        max-width: 100%;
     }
 
     /* changing font-size for accordions */

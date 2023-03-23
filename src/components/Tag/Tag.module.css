@@ -12,6 +12,16 @@
     padding: 4px 8px;
 }
 
+@media (max-width: 768px) {
+    .tag {
+        min-width: 100px;
+        height: 22px;
+        font-size: 12px;
+        line-height: 142.6%;
+        border-radius: 5px;
+    }
+}
+
 @media (max-width: 480px) {
     .tag {
         min-width: 84px;
