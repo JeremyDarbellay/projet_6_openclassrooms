@@ -7,14 +7,21 @@ export default function Slideshow({ pictures, title}) {
 
     const [ index, setIndex ] = useState(0)
 
+    const [ animated, setAnimated ] = useState(false)
+
+    const animationInProgress = animated ? styles.animation : null;
+
     let currentPicture = pictures[index]
 
     /**
      * change img src to next picture
      * change index state accordingly
+     * display an animation between states
      * @return {void}
      */
     function handleNextClick() {
+
+        setAnimated(true)
 
         let nextIndex
 
@@ -24,16 +31,26 @@ export default function Slideshow({ pictures, title}) {
 
         currentPicture = pictures[nextIndex]
 
-        setIndex(nextIndex)
+        setTimeout( () => {
+
+            setIndex(nextIndex)
+
+            setAnimated(false)
+
+        }, 500)
 
     }
 
     /**
      * change img src to previous picture
      * change index state accordingly
+     * display an animation between states
      * @return {void}
      */
     function handlePreviousClick() {
+
+        setAnimated(true)
+
 
         let nextIndex
 
@@ -43,13 +60,19 @@ export default function Slideshow({ pictures, title}) {
 
         currentPicture = pictures[nextIndex]
 
-        setIndex(nextIndex)
 
+        setTimeout(() => {
+
+            setIndex(nextIndex)
+
+            setAnimated(false)
+
+            }, 500)
         }
 
     return(
         <div className={styles.wrapper}>
-            <img className={styles.img} src={currentPicture} alt={title}/>
+            <img className={`${styles.img} ${animationInProgress}`} src={currentPicture} alt={title}/>
             { pictures.length === 1 ? null :
                 <div>
                     <button className={styles.previous} onClick={handlePreviousClick}>

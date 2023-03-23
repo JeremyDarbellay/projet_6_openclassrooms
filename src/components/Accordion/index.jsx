@@ -16,9 +16,21 @@ export default function Accordion({ title, content }) {
 
     const [ collapsed, setCollapsed ] = useState(false)
 
+    const [ animation, setAnimation ] = useState(false)
+
+    const animationInProgress = animation ? styles.animation : styles.animationReverse;
+
     function handleCollapsedClick() {
 
-        setCollapsed(!collapsed)
+        if (!collapsed)  {
+            setAnimation(true)
+            setCollapsed(!collapsed)
+        } 
+
+        else {
+            setAnimation(false)
+            setTimeout( setCollapsed, 250, !collapsed)
+        }
 
     }
 
@@ -37,7 +49,7 @@ export default function Accordion({ title, content }) {
                 
             </ button>
 
-            { collapsed ? <div className={styles.content}>{ content.map( (node, index) => <p key={index.toString()}>{node}</p>) }</div> : null }
+            { collapsed ? <div className={`${styles.content} ${animationInProgress}`}>{ content.map( (node, index) => <p key={index.toString()}>{node}</p>) }</div> : null }
 
         </div>
     )

@@ -4,18 +4,23 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    padding: 4px;
+    border-radius: 5px;
 }
 
 .button {
     font-size: 24px;
     line-height: 142.6%;
     border: none;
+    border-radius: 5px;
     background: unset;
     padding: 0;
     display: block;
     cursor: pointer;
     width: 100%;
     flex-grow: 0;
+    z-index:1;
 }
 
 .title {
@@ -28,6 +33,22 @@
     border-radius: 5px;
     z-index: 1;
     position: relative;
+}
+
+.animation {
+    animation: 0.25s linear slideDown;
+}
+.animationReverse {
+    animation: 0.25s linear slideUp;
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-66%) scaleY(0)}
+    to {transform: translateY(0) scaleY(1)}
+}
+@keyframes slideUp {
+    from {transform: translateY(0) scaleY(1);}
+    to {transform: translateY(-66%) scaleY(0);}
 }
 
 .arrow {
