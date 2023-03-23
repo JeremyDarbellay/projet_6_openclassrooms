@@ -4,6 +4,11 @@ import bannerImg from './home-banner.png'
 
 import { useLoaderData, Link } from 'react-router-dom'
 
+/**
+ * return home page
+ * at "/" path
+ * @return {ReactComponent}
+ */
 export default function Home() {
 
     const { apartments } = useLoaderData()

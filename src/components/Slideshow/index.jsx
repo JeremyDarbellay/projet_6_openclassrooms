@@ -3,13 +3,20 @@ import arrow from './arrow.svg'
 
 import { useState } from 'react'
 
-export default function Slideshow({ pictures, title}) {
+/**
+ * return a slideshow
+ * @property {string} image - the image url
+ * @property {string} title - the alt of the image
+ * 
+ * @return {ReactComponent}
+ */
+export default function Slideshow({ pictures, alt }) {
 
-    const [ index, setIndex ] = useState(0)
+    const [index, setIndex] = useState(0)
 
-    const [ animated, setAnimated ] = useState(false)
+    const [animated, setAnimated] = useState(false)
 
-    const animationInProgress = animated ? styles.animation : null;
+    const animationInProgress = animated ? styles.animation : null
 
     let currentPicture = pictures[index]
 
@@ -27,11 +34,11 @@ export default function Slideshow({ pictures, title}) {
 
         nextIndex = index + 1
 
-        if (nextIndex > (pictures.length -1)) nextIndex = 0;
+        if (nextIndex > (pictures.length - 1)) nextIndex = 0
 
         currentPicture = pictures[nextIndex]
 
-        setTimeout( () => {
+        setTimeout(() => {
 
             setIndex(nextIndex)
 
@@ -56,7 +63,7 @@ export default function Slideshow({ pictures, title}) {
 
         nextIndex = index - 1
 
-        if (nextIndex < 0 ) nextIndex = (pictures.length - 1);
+        if (nextIndex < 0) nextIndex = (pictures.length - 1)
 
         currentPicture = pictures[nextIndex]
 
@@ -67,13 +74,13 @@ export default function Slideshow({ pictures, title}) {
 
             setAnimated(false)
 
-            }, 500)
-        }
+        }, 500)
+    }
 
-    return(
+    return (
         <div className={styles.wrapper}>
-            <img className={`${styles.img} ${animationInProgress}`} src={currentPicture} alt={title}/>
-            { pictures.length === 1 ? null :
+            <img className={`${styles.img} ${animationInProgress}`} src={currentPicture} alt={alt} />
+            {pictures.length === 1 ? null :
                 <div>
                     <button className={styles.previous} onClick={handlePreviousClick}>
                         <img className={styles.arrow} src={arrow} alt="Précédent" />

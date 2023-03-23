@@ -3,6 +3,10 @@ import styles from './Header.module.css'
 
 import { NavLink } from 'react-router-dom'
 
+/**
+ * return the Header of the page
+ * @return {ReactComponent}
+ */
 export default function Header() {
     return (
         <header id="header" className={styles.Header} data-testid="header">

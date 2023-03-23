@@ -14,22 +14,22 @@ export default function Accordion({ title, content }) {
     // if content isn't an array, create an array from it
     content = Array.isArray(content) ? content : [content]
 
-    const [ collapsed, setCollapsed ] = useState(false)
+    const [collapsed, setCollapsed] = useState(false)
 
-    const [ animation, setAnimation ] = useState(false)
+    const [animation, setAnimation] = useState(false)
 
-    const animationInProgress = animation ? styles.animation : styles.animationReverse;
+    const animationInProgress = animation ? styles.animation : styles.animationReverse
 
     function handleCollapsedClick() {
 
-        if (!collapsed)  {
+        if (!collapsed) {
             setAnimation(true)
             setCollapsed(!collapsed)
-        } 
+        }
 
         else {
             setAnimation(false)
-            setTimeout( setCollapsed, 250, !collapsed)
+            setTimeout(setCollapsed, 250, !collapsed)
         }
 
     }
@@ -43,13 +43,13 @@ export default function Accordion({ title, content }) {
 
                     <div>{title}</div>
 
-                    { collapsed ? <Arrow className={`${styles.arrow} ${styles.collapsed}`}/> : <Arrow className={styles.arrow}/> }
-                    
+                    {collapsed ? <Arrow className={`${styles.arrow} ${styles.collapsed}`} /> : <Arrow className={styles.arrow} />}
+
                 </div>
-                
+
             </ button>
 
-            { collapsed ? <div className={`${styles.content} ${animationInProgress}`}>{ content.map( (node, index) => <p key={index.toString()}>{node}</p>) }</div> : null }
+            {collapsed ? <div className={`${styles.content} ${animationInProgress}`}>{content.map((node, index) => <p key={index.toString()}>{node}</p>)}</div> : null}
 
         </div>
     )

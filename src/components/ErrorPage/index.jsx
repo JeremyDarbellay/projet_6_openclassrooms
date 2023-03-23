@@ -6,12 +6,17 @@ import styles from './ErrorPage.module.css'
 
 import svg from './error.svg'
 
+/**
+ * return the error page
+ * with a big 404
+ * @return {ReactComponent}
+ */
 export default function ErrorPage() {
     return (
         <React.Fragment>
             <Header />
             <main className={styles.error}>
-                
+
                 <h2 className={styles.container}>
                     <img src={svg} alt="404" className={styles.img}></img>
                 </h2>

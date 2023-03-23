@@ -8,6 +8,7 @@
 .apartmentInfos {
     max-width: 50%;
 }
+
 .title {
     font-size: 36px;
     line-height: 142.6%;
@@ -53,7 +54,7 @@
 .hostImg {
     border-radius: 50%;
     width: 64px;
-    height:64px;
+    height: 64px;
 }
 
 .star {
@@ -90,7 +91,7 @@
     margin-bottom: 14px;
 }
 
-.accordionsWrapper > * {
+.accordionsWrapper>* {
     max-width: 47.5%;
     flex: 1 1 47.5%;
 }
@@ -100,7 +101,8 @@
     font-size: 18px;
     line-height: 142.6%;
 }
-.accordionsWrapper > div > button > div > div {
+
+.accordionsWrapper>div>button>div>div {
     font-size: 18px;
     line-height: 142.6%;
 }
@@ -120,25 +122,25 @@
         line-height: 142.6%;
         margin-bottom: 5px;
     }
-    
+
     .subtitle {
         font-size: 16px;
         line-height: 142.6%;
         margin-bottom: 10px;
     }
-    
-    
+
+
     .hostName {
         font-size: 15px;
         line-height: 142.6%;
     }
-    
+
     .hostImg {
         width: 48px;
         height: 48px;
         flex-basis: 48px;
     }
-    
+
     .star {
         width: 27px;
         height: 27px;
@@ -148,9 +150,9 @@
     .accordionsWrapper {
         flex-direction: column;
         gap: 20px;
-    } 
+    }
 
-    .accordionsWrapper > * {
+    .accordionsWrapper>* {
         max-width: 100%;
     }
 }
@@ -172,7 +174,7 @@
         line-height: 142.6%;
         margin-bottom: 5px;
     }
-    
+
     .subtitle {
         font-size: 14px;
         line-height: 142.6%;
@@ -186,27 +188,28 @@
         margin-top: 1em;
         margin-bottom: 1em;
     }
-    
+
     .host {
         order: 1;
     }
-    
+
     .hostName {
         font-size: 12px;
         line-height: 142.6%;
     }
-    
+
     .hostImg {
         width: 32px;
         height: 32px;
         flex-basis: 32px;
     }
-    
+
     .star {
         width: 18px;
         height: 18px;
         margin-right: 2px;
     }
+
     .star svg {
         max-width: 90%;
         max-height: 90%;
@@ -214,10 +217,10 @@
 
     .accordionsWrapper {
         flex-direction: column;
-        
+
     }
-    
-    .accordionsWrapper > * {
+
+    .accordionsWrapper>* {
         max-width: 100%;
     }
 
@@ -226,12 +229,13 @@
         font-size: 12px;
         line-height: 142.6%;
     }
-    .accordionsWrapper > div > button > div > div {
+
+    .accordionsWrapper>div>button>div>div {
         font-size: 13px;
         line-height: 142.6%;
     }
 
-    .accordionsWrapper > * {
+    .accordionsWrapper>* {
         flex: 1 1 50%;
     }
 }

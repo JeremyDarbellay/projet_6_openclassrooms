@@ -1,11 +1,11 @@
-import './index.css';
+import './index.css'
 import { ErrorPage, Logement, About, App, Home } from './components'
 import { loadAllApartments, loadOneApartment } from './utils/jsonDataLoader'
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
 
 /**
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path:"/",
+        path: "/",
         element: <Home />,
         loader: loadAllApartments,
       },
@@ -36,12 +36,12 @@ const router = createBrowserRouter([
       }
     ],
   },
-]);
+])
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-);
+)

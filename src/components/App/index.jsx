@@ -6,7 +6,9 @@ import { Outlet } from 'react-router-dom'
 import React from 'react'
 
 /**
- * Return page from url
+ * Return page
+ * with header and footer
+ * @return {ReactComponent}
  */
 export default function App() {
   return (
