@@ -6,9 +6,6 @@ import { useLoaderData, Link } from 'react-router-dom'
 
 export default function Home() {
 
-    /** 
-     * @const {Array} 
-     */
     const { apartments } = useLoaderData()
 
     return (

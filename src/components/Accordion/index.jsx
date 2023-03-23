@@ -23,7 +23,7 @@ export default function Accordion({ title, content }) {
     }
 
     return (
-        <div>
+        <div class={styles.wrapper}>
 
             <button className={styles.button} onClick={handleCollapsedClick}>
 

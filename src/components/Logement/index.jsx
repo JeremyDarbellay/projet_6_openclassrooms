@@ -1,5 +1,6 @@
 import styles from './Logement.module.css'
 import { Slideshow, Accordion, Tag } from '..'
+import { ReactComponent as Star } from './star.svg'
 
 import { useLoaderData } from 'react-router-dom'
 
@@ -42,25 +43,27 @@ export default function Logement() {
                 <Slideshow pictures={apartment.pictures} title={apartment.title} />
             </section>
             <section className={styles.mainSection}>
-                <div>
-                    <h2>{apartment.title}</h2>
-                    <h3>{apartment.location}</h3>
-                    {
-                        apartment.tags.map((tag, index) => (
-                            <Tag key={index} tag={tag} />
-                        ))
-                    }
+                <div className={styles.apartmentInfos}>
+                    <h2 className={styles.title}>{apartment.title}</h2>
+                    <p className={styles.subtitle}>{apartment.location}</p>
+                    <div className={styles.tags}>
+                        {
+                            apartment.tags.map((tag, index) => (
+                                <Tag key={index} tag={tag} />
+                            ))
+                        }
+                    </div>
                 </div>
-                <div>
-                    <div>
-                        <div>{apartment.host.name}</div>
-                        <img src={apartment.host.picture} alt={apartment.host.name} />
+                <div className={styles.hostAndRate}>
+                    <div className={styles.host}>
+                        <div className={styles.hostName}>{apartment.host.name}</div>
+                        <img className={styles.hostImg} src={apartment.host.picture} alt={apartment.host.name} />
                     </div>
                     <div>
                         {
                             formatRating(apartment.rating).map((star, index) =>
-                                star.full ? <span key={index.toString()} className={styles.full}></span>
-                                    : <span key={index.toString()} className={styles.empty}></span>
+                                star.full ? <span aria-hidden="true" key={index.toString()} className={`${styles.star} ${styles.full}`}><Star /></span>
+                                    : <span aria-hidden="true" key={index.toString()} className={`${styles.star} ${styles.empty}`}><Star /></span>
                             )
                         }
                         <span className={styles.hiddenRating}>Note : {apartment.rating} sur 5</span>
@@ -68,7 +71,7 @@ export default function Logement() {
                 </div>
             </section>
             <section className={styles.accordionsWrapper}>
-                <Accordion title="description" content={apartment.description} />
+                <Accordion title="Description" content={apartment.description} />
                 <Accordion title="Équipements" content={apartment.equipments} />
             </section>
         </main>

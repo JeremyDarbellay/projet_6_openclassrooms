@@ -1,8 +1,21 @@
 .tag {
     background-color: #FF6060;
     color: white;
-    padding: 3px 22px;
     font-size: 14px;
-    margin-right: 10px;
     border-radius: 10px;
+    min-width: 115px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+}
+
+@media (max-width: 480px) {
+    .tag {
+        min-width: 84px;
+        height: 18px;
+        font-size: 10px;
+        border-radius: 5px;
+    }
 }

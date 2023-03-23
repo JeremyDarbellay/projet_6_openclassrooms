@@ -2,8 +2,9 @@ import styles from './Tag.module.css'
 
 /**
  * Return a styled span "tag"
- * @param {string} text the name
+ * @property {string} tag - the text
+ * @return {ReactComponentElement}
  */
-export default function Tag({ text }) {
-    return(<span className={styles.tag}>{text}</span>)
+export default function Tag({ tag }) {
+    return(<span className={styles.tag}>{tag}</span>)
 }
