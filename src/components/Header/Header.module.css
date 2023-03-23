@@ -38,6 +38,7 @@
     color: #FF6060;
     text-decoration: none;
     font-size: 1.5em;
+    line-height: 142.6%;
 }
 
 .Header a[class="active"] {
@@ -51,12 +52,14 @@
 .Header h1 {
     margin: 0;
     font-size: 0;
+    line-height: 142.6%;
     max-width: fit-content;
 }
 
 @media (max-width: 768px) {
     .Header a {
         font-size: 1.25em;
+        line-height: 142.6%;
     }
 }
 
@@ -82,5 +85,6 @@
     .Header a {
         text-decoration: none;
         font-size: 0.75em;
+        line-height: 142.6%;
     }
 }

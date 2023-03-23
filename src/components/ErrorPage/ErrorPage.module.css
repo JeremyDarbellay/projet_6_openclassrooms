@@ -20,6 +20,7 @@
 
 .detail {
     font-size: 36px;
+    line-height: 142.6%;
     max-width: 70%;
     margin: 0 auto 182px auto;
 }
@@ -27,6 +28,7 @@
 .link {
     color: #FF6060;
     font-size: 18px;
+    line-height: 142.6%;
     max-width: 60%;
     margin: 0 auto 159px auto;
 }
@@ -39,10 +41,12 @@
     .detail {
         margin-bottom: 157px;
         font-size: 27px;
+        line-height: 142.6%;
     }
     .link {
         margin-bottom: 200px;
         font-size: 16px;
+        line-height: 142.6%;
     }
 }
 
@@ -54,10 +58,12 @@
     .detail {
         margin-bottom: 133px;
         font-size: 18px;
+        line-height: 142.6%;
     }
     .link {
         margin-bottom: 235px;
         font-size: 14px;
+        line-height: 142.6%;
     }
 }
 

@@ -10,11 +10,13 @@
 }
 .title {
     font-size: 36px;
+    line-height: 142.6%;
     margin: 0;
 }
 
 .subtitle {
     font-size: 18px;
+    line-height: 142.6%;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -40,6 +42,7 @@
 
 .hostName {
     font-size: 18px;
+    line-height: 142.6%;
     text-align: right;
     margin-right: 10px;
     flex-grow: 0;
@@ -94,9 +97,11 @@
 /* changing font-size for accordions */
 .accordionsWrapper p {
     font-size: 18px;
+    line-height: 142.6%;
 }
 .accordionsWrapper > div > button > div > div {
     font-size: 18px;
+    line-height: 142.6%;
 }
 
 @media (max-width: 480px) {
@@ -113,11 +118,13 @@
 
     .title {
         font-size: 18px;
+        line-height: 142.6%;
         margin-bottom: 5px;
     }
     
     .subtitle {
         font-size: 14px;
+        line-height: 142.6%;
         margin-bottom: 10px;
     }
 
@@ -135,6 +142,7 @@
     
     .hostName {
         font-size: 12px;
+        line-height: 142.6%;
     }
     
     .hostImg {
@@ -161,9 +169,11 @@
     /* changing font-size for accordions */
     .accordionsWrapper p {
         font-size: 12px;
+        line-height: 142.6%;
     }
     .accordionsWrapper > div > button > div > div {
         font-size: 13px;
+        line-height: 142.6%;
     }
 
     .accordionsWrapper > * {

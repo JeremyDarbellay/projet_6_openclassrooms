@@ -8,6 +8,7 @@
 
 .button {
     font-size: 24px;
+    line-height: 142.6%;
     border: none;
     background: unset;
     padding: 0;
@@ -61,9 +62,11 @@
 @media (max-width: 768px) {
     .title {
         font-size: 20px
+        line-height: 142.6%;
     }
     .content {
         font-size: 18px;
+        line-height: 142.6%;
     }
     .arrow {
         width: 24px;
@@ -74,10 +77,12 @@
 @media (max-width: 480px) {
     .title {
         font-size: 13px;
+        line-height: 142.6%;
         padding: 6px 6px 6px 12px;
     }
     .content {
         font-size: 12px;
+        line-height: 142.6%;
         min-height: 143px;
         padding-top: 23px;
         padding-left: 12px;

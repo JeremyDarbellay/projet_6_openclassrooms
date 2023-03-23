@@ -50,13 +50,17 @@ export default function Slideshow({ pictures, title}) {
     return(
         <div className={styles.wrapper}>
             <img className={styles.img} src={currentPicture} alt={title}/>
-            <button className={styles.previous} onClick={handlePreviousClick}>
-                <img className={styles.arrow} src={arrow} alt="Précédent" />
-            </button>
-            <span className={styles.indicator}>{index + 1}/{pictures.length}</span>
-            <button onClick={handleNextClick} className={styles.next}>
-                <img className={styles.arrow} src={arrow} alt="Suivant" />
-            </button>
+            { pictures.length === 1 ? null :
+                <div>
+                    <button className={styles.previous} onClick={handlePreviousClick}>
+                        <img className={styles.arrow} src={arrow} alt="Précédent" />
+                    </button>
+                    <span className={styles.indicator}>{index + 1}/{pictures.length}</span>
+                    <button onClick={handleNextClick} className={styles.next}>
+                        <img className={styles.arrow} src={arrow} alt="Suivant" />
+                    </button>
+                </div>
+            }
         </div>
     )
 }
