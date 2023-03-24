@@ -22,7 +22,7 @@ describe('Le composant App', () => {
     render(<RouterProvider router={router} />)
   })
 
-  test('doit afficher le header et le footer', async () => {
+  test('doit comporter une balise main', async () => {
 
     const routes = [
       {
@@ -37,8 +37,7 @@ describe('Le composant App', () => {
 
     render(<RouterProvider router={router} />)
 
-    expect(screen.getByTestId('header')).toBeDefined()
-    expect(screen.getByTestId('footer')).toBeDefined()
+    expect(screen.getByRole('main')).toBeTruthy()
 
   })
 })
