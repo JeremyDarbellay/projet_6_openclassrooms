@@ -11,7 +11,7 @@ import accordions from './accordions.json'
 export default function About() {
 
     return (
-        <main className={styles.aboutPage}>
+        <div className={styles.aboutPage}>
             <div className={styles.bannerWrapper}>
                 <Banner img={bannerImg} alt="Un paysage naturel avec des montagnes des forêts et un cours d'eau le traversant" />
             </div>
@@ -26,6 +26,6 @@ export default function About() {
                     ))
                 }
             </section>
-        </main>
+        </div>
     )
 }

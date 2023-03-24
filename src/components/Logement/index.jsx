@@ -3,6 +3,7 @@ import { Slideshow, Accordion, Tag } from '..'
 import { ReactComponent as Star } from './star.svg'
 
 import { useLoaderData } from 'react-router-dom'
+import React from 'react'
 
 /**
  * return logement page with data
@@ -53,9 +54,9 @@ export default function Logement() {
 
 
     return (
-        <main>
-            <section>
-                <Slideshow pictures={apartment.pictures} title={apartment.title} />
+        <React.Fragment>
+            <section aria-label="Carrousel d'image du logement">
+                <Slideshow pictures={apartment.pictures} alt={apartment.title} />
             </section>
             <section className={styles.mainSection}>
                 <div className={styles.apartmentInfos}>
@@ -85,10 +86,10 @@ export default function Logement() {
                     </div>
                 </div>
             </section>
-            <section className={styles.accordionsWrapper}>
+            <section className={styles.accordionsWrapper} aria-label="détails sur le logement">
                 <Accordion title="Description" content={apartment.description} />
                 <Accordion title="Équipements" content={apartment.equipments} />
             </section>
-        </main>
+        </React.Fragment>
     )
 }

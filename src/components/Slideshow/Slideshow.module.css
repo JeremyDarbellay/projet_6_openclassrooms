@@ -29,7 +29,7 @@
     }
 
     to {
-        transform: translateX(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 }
 
