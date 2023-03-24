@@ -3,7 +3,7 @@ import data from './logements.json'
 /**
  * return json object containing 
  * our apartments
- * @return {object} the data array
+ * @return {array} the data array
  */
 export async function loadAllApartments() {
 
