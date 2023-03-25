@@ -85,7 +85,7 @@ export default function Slideshow({ pictures, alt }) {
                     <button className={styles.previous} onClick={handlePreviousClick}>
                         <img className={styles.arrow} src={arrow} alt="Précédent" />
                     </button>
-                    <span className={styles.indicator}>{index + 1}/{pictures.length}</span>
+                    <span className={styles.indicator} aria-live="polite" aria-atomic="true">{index + 1}/{pictures.length}</span>
                     <button onClick={handleNextClick} className={styles.next}>
                         <img className={styles.arrow} src={arrow} alt="Suivant" />
                     </button>
