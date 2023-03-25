@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
  */
 export default function Header() {
     return (
-        <header id="header" className={styles.Header} data-testid="header">
+        <header id="header" className={styles.Header}>
             <div>
                 <h1>
                     <img src={logo} alt="Logo de Kasa"></img>

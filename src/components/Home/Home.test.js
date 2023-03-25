@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, within } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import {
     RouterProvider,
@@ -49,6 +49,8 @@ describe('Le composant Home doit :', () => {
 
         const allLinks = await screen.findAllByRole('link')
         expect(allLinks.length === 2).toBeTruthy()
+        expect(within(allLinks[0]).getByText('test title')).toBeTruthy()
+        expect(within(allLinks[1]).getByText('test 2 title')).toBeTruthy()
         
     })
 })

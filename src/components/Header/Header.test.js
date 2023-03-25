@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { MemoryRouter } from 'react-router-dom'
 
@@ -19,8 +19,11 @@ describe('Le composant Header doit :', () => {
 
         expect(screen.getByRole('banner')).toBeTruthy()
         expect(screen.getByRole('navigation')).toBeTruthy()
-        expect(screen.getByText('Accueil')).toBeTruthy()
-        expect(screen.getByText('A propos')).toBeTruthy()
+
+        const links = screen.getAllByRole('link')
+        expect(within(links[0]).getByText('Accueil')).toBeTruthy()
+        expect(within(links[1]).getByText('A propos')).toBeTruthy()
+        
         expect(screen.getByRole('img')).toBeTruthy()
         expect(screen.getByAltText('Logo de Kasa')).toBeTruthy()
         expect(screen.getByRole('heading', {"level": 1})).toBeTruthy()

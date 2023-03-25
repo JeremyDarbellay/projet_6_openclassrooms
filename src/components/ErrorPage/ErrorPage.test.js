@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { MemoryRouter } from 'react-router-dom'
 
@@ -19,7 +19,10 @@ describe('Le composant ErrorPage doit :', () => {
 
         expect(screen.getByRole('heading', {"level": 2})).toBeTruthy()
         expect(screen.getByAltText('404')).toBeTruthy()
+        
+        expect(within(screen.getByRole('main')).getByRole('link')).toBeTruthy()
         expect(screen.getByText("Retournez sur la page d'accueil")).toBeTruthy()
+
         expect(screen.getByRole('main')).toBeTruthy()
     })
 })
