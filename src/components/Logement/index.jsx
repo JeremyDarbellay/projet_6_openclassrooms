@@ -58,9 +58,9 @@ export default function Logement() {
             <section aria-label="Carrousel d'image du logement">
                 <Slideshow pictures={apartment.pictures} alt={apartment.title} />
             </section>
-            <section className={styles.mainSection}>
+            <section aria-labelledby="apartment-title" className={styles.mainSection}>
                 <div className={styles.apartmentInfos}>
-                    <h2 className={styles.title}>{apartment.title}</h2>
+                    <h2 id="apartment-title" className={styles.title}>{apartment.title}</h2>
                     <p className={styles.subtitle}>{apartment.location}</p>
                     <div className={styles.tags}>
                         {
