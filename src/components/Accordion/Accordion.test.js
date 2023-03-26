@@ -1,5 +1,4 @@
-import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, screen, waitForElementToBeRemoved, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import Accordion from './'
@@ -25,13 +24,13 @@ describe('Le composant Accordion doit :', () => {
 
         expect(screen.getByText('test title')).toBeTruthy()
         expect(screen.queryByText('test content')).toBeNull()
-        
-        userEvent.click(screen.getByRole('button'))
 
+        fireEvent.click(screen.getByRole('button'))
+            
         expect(await screen.findByText('test content')).toBeTruthy()
 
 
-        userEvent.click(screen.getByRole('button'))
+        fireEvent.click(screen.getByRole('button'))
 
         await waitForElementToBeRemoved(screen.queryByText('test content'))
 
@@ -53,7 +52,7 @@ describe('Le composant Accordion doit :', () => {
         expect(controlAttribute).toBeTruthy()
 
 
-        userEvent.click(screen.getByRole('button'))
+        fireEvent.click(screen.getByRole('button'))
 
         
         expect(await screen.findByRole('button', {expanded: true})).toBeTruthy()
@@ -62,7 +61,7 @@ describe('Le composant Accordion doit :', () => {
         const element = await screen.findByRole('region')
         expect(element.id === controlAttribute).toBeTruthy()
 
-        userEvent.click(screen.getByRole('button'))
+        fireEvent.click(screen.getByRole('button'))
 
         await waitForElementToBeRemoved(screen.queryByText('test content'))
 

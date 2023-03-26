@@ -1,7 +1,7 @@
 import { ErrorPage, Logement, About, App, Home } from './components'
 
 import { createMemoryRouter, RouterProvider } from "react-router-dom"
-import { render, screen, fireEvent, prettyDOM, within } from '@testing-library/react'
+import { render, screen, fireEvent, waitForElementToBeRemoved } from '@testing-library/react'
 
 const data = [
 	{
@@ -151,30 +151,25 @@ describe('L\'utilisateur devrait :', () => {
         expect(screen.getByText('Chez vous, partout et ailleurs')).toBeInTheDocument()
 
         // about
-        await fireEvent.click(screen.getByRole('link', {name: 'A propos'}))
+        fireEvent.click(screen.getByRole('link', {name: 'A propos'}))
         expect(await screen.findByText('Respect')).toBeInTheDocument()
 
         // return to home
-        await fireEvent.click(screen.getByRole('link', {name: 'Accueil'}))
+        fireEvent.click(screen.getByRole('link', {name: 'Accueil'}))
         expect(await screen.findByText('Chez vous, partout et ailleurs')).toBeInTheDocument()
 
-        // go to first apartment
-        prettyDOM(screen.getByRole('main'));
-
-        // get apartments links to navigate
-        const linkFirstApartment = within(screen.getByRole('main')).getAllByRole('link')[0]
-        const linkSecondApartment = within(screen.getByRole('main')).getAllByRole('link')[1]
-
         // first apartment
-        await fireEvent.click(linkFirstApartment)
+        fireEvent.click(screen.getByRole('link', {name: 'Apartment1 Apartment1'}))
+        await waitForElementToBeRemoved( () => screen.queryByText('Chez vous, partout et ailleurs'))
         expect(await screen.findByText('Apartment1')).toBeInTheDocument()
 
         // return to home
-        await fireEvent.click(screen.getByRole('link', {name: 'Accueil'}))
+        fireEvent.click(screen.getByRole('link', {name: 'Accueil'}))
         expect(await screen.findByText('Chez vous, partout et ailleurs')).toBeInTheDocument()
 
         // second apartment
-        await fireEvent.click(linkSecondApartment)
+        fireEvent.click(screen.getByRole('link', {name: 'Apartment2 Apartment2'}))
+        await waitForElementToBeRemoved( () => screen.queryByText('Chez vous, partout et ailleurs'))
         expect(await screen.findByText('Apartment2')).toBeInTheDocument()
 
     })

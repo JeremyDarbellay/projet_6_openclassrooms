@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
+
 import '@testing-library/jest-dom'
 
 import Slideshow from './'
@@ -24,7 +25,7 @@ describe('Le composant Slideshow doit :', () => {
 
         expect(screen.getByAltText('test alt')).toBeInTheDocument()
 
-        await fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
+        fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
 
         expect(await screen.findByText('2/2')).toBeInTheDocument()
 
@@ -51,7 +52,7 @@ describe('Le composant Slideshow doit :', () => {
         expect(firstSrc).toBe('test.png')
 
         // test previous on first slide goes to last
-        await fireEvent.click(screen.getByRole('button', {name: 'Précédent'}))
+        fireEvent.click(screen.getByRole('button', {name: 'Précédent'}))
         expect(await screen.findByText('2/2')).toBeInTheDocument()
         // check that image has changed
         let secondSrc = screen.getByAltText('test alt').getAttribute('src')
@@ -59,7 +60,7 @@ describe('Le composant Slideshow doit :', () => {
         expect(secondSrc).toBe('test2.png')
 
         // test next on last slide goes to first
-        await fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
+        fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
         expect(await screen.findByText('1/2')).toBeInTheDocument()
         // check that image has changed again
         // and image is back to original
@@ -68,12 +69,12 @@ describe('Le composant Slideshow doit :', () => {
         expect(firstSrc === nextSrc).toBeTruthy()
 
         // test next goes next
-        await fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
+        fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
         expect(await screen.findByText('2/2')).toBeInTheDocument()
         expect(screen.getByAltText('test alt').getAttribute('src')).toBe('test2.png')
 
         // test previous goes previous
-        await fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
+        fireEvent.click(screen.getByRole('button', {name: 'Suivant'}))
         expect(await screen.findByText('1/2')).toBeInTheDocument()
         expect(screen.getByAltText('test alt').getAttribute('src')).toBe('test.png')
 
