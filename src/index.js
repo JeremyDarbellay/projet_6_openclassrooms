@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       }
     ],
   },
-])
+], {basename: "/projet_6_openclassrooms"})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
